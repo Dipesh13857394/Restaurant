@@ -15,18 +15,28 @@ namespace Assessment3
         public MenuList()
         {
             InitializeComponent();
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
             Menu menu = new Menu();
-            Console.WriteLine("Here");
+
+
             foreach (string item in menu.menuList)
             {
 
                 listBox1.Items.Add(item);
-                MessageBox.Show("Adding data from file");
+                //MessageBox.Show(item);
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*Menu menu = new Menu();
+
+
+            foreach (string item in menu.menuList)
+            {
+
+                listBox1.Items.Add(item);
+                MessageBox.Show(item);
+            }*/
             /*string filePath = "Menu.txt";
             if (File.Exists(filePath))
             {
@@ -37,6 +47,27 @@ namespace Assessment3
             {
                 richTextBox1.Text = "No File Found";
             }*/
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Hide();
+            form.Show();
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

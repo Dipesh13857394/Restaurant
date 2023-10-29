@@ -15,10 +15,11 @@ namespace Assessment3
             if (File.Exists("Menu.txt"))
             {
                 string[] filesContent = File.ReadAllLines("Menu.txt");
+
                 foreach (string file in filesContent)
                 {
                     menuList.Add(file);
-                    
+
 
                 }
             }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -35,6 +36,19 @@ namespace Assessment3
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MenuList menuList = new MenuList();
+            //below code works
+            /*string filePath = "Menu.txt";
+            if(File.Exists(filePath))
+            {
+                string[] menuItems = File.ReadAllLines(filePath);
+                MessageBox.Show(menuItems[0]);
+
+            }
+            else
+            {
+                MessageBox.Show("File not found");
+            }*/
+
             this.Hide();
             menuList.Show();
 

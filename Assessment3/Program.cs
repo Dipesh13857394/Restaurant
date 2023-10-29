@@ -10,6 +10,17 @@ namespace Assessment3
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            using(var context = new RestaurantContext())
+            {
+                context.Database.EnsureCreated();
+                var cust1 = new Customer { name = "Dipesh", email= "abc@gmail.com", phone =12345678, id =123 };
+                var cust2 = new Customer { name = "David", email ="dav@gmail.com", phone =123123, id=321 };
+                var tab = new Table() {number=1,  numguest = 6 };
+                context.Customers.Add(cust1);
+                context.Customers.Add(cust2);
+                context.Tables.Add(tab);
+                context.SaveChanges();
+            }
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }

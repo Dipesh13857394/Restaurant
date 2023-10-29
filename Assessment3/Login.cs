@@ -24,11 +24,17 @@ namespace Assessment3
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Form1 form = new Form1();
+            this.Hide();
+            form.Show();
 
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            MenuList menuList = new MenuList();
+            this.Hide();
+            menuList.Show();
 
         }
 
