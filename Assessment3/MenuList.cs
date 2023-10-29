@@ -17,10 +17,8 @@ namespace Assessment3
             InitializeComponent();
             Menu menu = new Menu();
 
-
             foreach (string item in menu.menuList)
             {
-
                 listBox1.Items.Add(item);
                 //MessageBox.Show(item);
             }
